@@ -5,4 +5,4 @@ docker service stop gdal-service || true
 docker build -t gdal-service .
 #docker run --name gdal-service -d -p 5000:5000 gdal-service
 docker stack deploy -c docker-compose.yml gdal
-#docker logs gdal-service
+docker service logs gdal_gdal-service

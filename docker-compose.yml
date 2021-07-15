@@ -1,0 +1,21 @@
+version: '3.5'
+
+#networks:
+#  gdla-net:
+#    name: gdal-net
+
+volumes:
+  src:
+  test_data:
+
+services:
+  gdal-service:
+    image: gdal-service
+    volumes:
+      - ./src:/app
+      - ./test_data:/app/test_data
+    hostname: gdal-service
+#    networks:
+#      - gdal-net
+    ports:
+    - 5000:5000

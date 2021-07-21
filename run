@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-docker service stop gdal-service || true
+docker service rm gdal_gdal-service || true
 #docker rm gdal-service || true
 docker build -t gdal-service .
 #docker run --name gdal-service -d -p 5000:5000 gdal-service
 docker stack deploy -c docker-compose.yml gdal
-docker service logs gdal_gdal-service
+docker service logs -f gdal_gdal-service

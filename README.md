@@ -3,7 +3,7 @@ gdal-service
 
 
 Build
-`docker build gdalservice .`
+`docker build -t gdalservice .`
 
 Run 
 `docker run -d -p 5000:5000 myimage`

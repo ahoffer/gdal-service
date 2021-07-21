@@ -28,3 +28,6 @@ hs_err_pid*
 #Big files
 test/resources/*.ntf
 test/resources/*.nitf
+
+# Python virtual env
+venv
